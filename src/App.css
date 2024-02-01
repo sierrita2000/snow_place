@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e0e0e0be;
+}
+
+.tablas_titulo {
+  font-size: 60px;
+  font-family: var(--rubik);
+  margin: 1.5rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.tablas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pino1,
+.pino2 {
+  position: fixed;
+  z-index: -1;
+  height: 105vh;
+  top: 0;
+}
+
+.pino1 {
+  left: -12rem;
+}
+
+.pino2 {
+  right: -12rem;
+}

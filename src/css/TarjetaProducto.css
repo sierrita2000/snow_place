@@ -1,0 +1,110 @@
+:root {
+    --rubik: 'Rubik Mono One', monospace;
+}
+
+.tarjeta {
+    height: 25rem;
+    width: 30rem;
+    padding: 0 1.5rem;
+    margin: 2rem 4rem;
+    background-color: #e0e0e0;
+    box-shadow:  21px 21px 35px #8f8f8f,
+                -2px -2px 15px #b3b3b3;
+    border-radius: 20% 0 20% 0;
+    display: flex;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+/* parte izquierda de la tarjeta */
+.tarjeta__producto {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.tarjeta__producto__tabla_frente,
+.tarjeta__producto__tabla_detras {
+    position: absolute;
+    top: 3rem;
+    filter: drop-shadow(7px 7px 3.2px rgba(0, 0, 0, 0.692));
+    transition: all .5s ease-in-out;
+}
+
+.tarjeta__producto__tabla_frente {
+    transform: rotate(15deg);
+}
+
+.tarjeta__producto__tabla_detras {
+    transform: rotate(-15deg);
+}
+
+.tarjeta:hover .tarjeta__producto__tabla_frente{
+    top: 1rem;
+    transform: rotate(16deg);
+}
+
+.tarjeta:hover .tarjeta__producto__tabla_detras{
+    top: 2rem;
+    transform: rotate(-16deg);
+}
+
+/* fin parte izquierda de la tarjeta */
+
+/* parte derecha de la tarjeta */
+.tarjeta__informacion {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--rubik);
+    text-align: center;
+}
+
+.tarjeta__informacion h2 {
+    font-size: 30px;
+    margin: 1rem;
+}
+
+.tarjeta__informacion__info {
+    font-size: 14px;
+    margin: 1.5rem 0;
+}
+
+.tarjeta__informacion__precio {
+    font-size: 35px;
+}
+
+.tarjeta__informacion button {
+    padding: .5rem 1rem;
+    margin: 1.5rem 0 0;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--rubik);
+    color: whitesmoke;
+    border-radius: 20px 0 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 3.2px;
+    transition: all .1s ease-in-out;
+}
+
+.boton_comprar {
+    background-color: black;
+    cursor: pointer;
+}
+
+.boton_agotado {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.boton_comprar:active {
+    transform: scale(0.95);
+    box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
+} 
+
+/* fin parte izquierda de la tarjeta */
